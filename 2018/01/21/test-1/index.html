@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="```    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        if indexPath.section == 0 {            let model = topList[indexPath.row]            var t">
+<meta name="description" content="1234567891011121314151617181920212223242526func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) &amp;#123;    if indexPath.section == 0 &amp;#123;        let model = t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test 1">
 <meta property="og:url" content="http://yoursite.com/2018/01/21/test-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="```    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        if indexPath.section == 0 {            let model = topList[indexPath.row]            var t">
-<meta property="og:updated_time" content="2018-01-20T19:12:11.554Z">
+<meta property="og:description" content="1234567891011121314151617181920212223242526func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) &amp;#123;    if indexPath.section == 0 &amp;#123;        let model = t">
+<meta property="og:updated_time" content="2018-01-21T03:44:27.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test 1">
-<meta name="twitter:description" content="```    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        if indexPath.section == 0 {            let model = topList[indexPath.row]            var t">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) &amp;#123;    if indexPath.section == 0 &amp;#123;        let model = t">
 
 
 
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -234,7 +234,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/test-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="西红柿不是烂番茄">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T03:08:03+08:00">
                 2018-01-21
@@ -279,7 +279,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -320,17 +320,7 @@
       
 
       
-        <p>```<br>    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {<br>        if indexPath.section == 0 {<br>            let model = topList[indexPath.row]<br>            var titles: [String] = []<br>            var vcs: [UIViewController] = []<br>            for tab in model.extra?.tabList ?? [] {<br>                guard let tabTitle = tab.tabTitle else { continue }<br>                titles.append(tabTitle)<br>                vcs.append(UComicListViewController(argCon: tab.argCon,<br>                                                    argName: tab.argName,<br>                                                    argValue: tab.argValue))<br>            }<br>            let vc = UPageViewController(titles: titles, vcs: vcs, pageStyle: .topTabBar)<br>            vc.title = model.sortName<br>            navigationController?.pushViewController(vc, animated: true)<br>        }</p>
-<pre><code>    if indexPath.section == 1 {
-        let model = rankList[indexPath.row]
-        let vc = UComicListViewController(argCon: model.argCon,
-                                          argName: model.argName,
-                                          argValue: model.argValue)
-        vc.title = model.sortName
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-</code></pre>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) &#123;</span><br><span class="line">    if indexPath.section == 0 &#123;</span><br><span class="line">        let model = topList[indexPath.row]</span><br><span class="line">        var titles: [String] = []</span><br><span class="line">        var vcs: [UIViewController] = []</span><br><span class="line">        for tab in model.extra?.tabList ?? [] &#123;</span><br><span class="line">            guard let tabTitle = tab.tabTitle else &#123; continue &#125;</span><br><span class="line">            titles.append(tabTitle)</span><br><span class="line">            vcs.append(UComicListViewController(argCon: tab.argCon,</span><br><span class="line">                                                argName: tab.argName,</span><br><span class="line">                                                argValue: tab.argValue))</span><br><span class="line">        &#125;</span><br><span class="line">        let vc = UPageViewController(titles: titles, vcs: vcs, pageStyle: .topTabBar)</span><br><span class="line">        vc.title = model.sortName</span><br><span class="line">        navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    if indexPath.section == 1 &#123;</span><br><span class="line">        let model = rankList[indexPath.row]</span><br><span class="line">        let vc = UComicListViewController(argCon: model.argCon,</span><br><span class="line">                                          argName: model.argName,</span><br><span class="line">                                          argValue: model.argValue)</span><br><span class="line">        vc.title = model.sortName</span><br><span class="line">        navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -419,7 +409,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">西红柿不是烂番茄</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -431,7 +421,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -442,7 +432,7 @@
               <div class="site-state-item site-state-categories">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">Kategorien</span>
                 
               </div>
             
@@ -484,13 +474,13 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">西红柿不是烂番茄</span>
 
   
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
