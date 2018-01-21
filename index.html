@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T03:08:03+08:00">
                 2018-01-21
@@ -278,7 +278,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -321,7 +321,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) &#123;</span><br><span class="line">    if indexPath.section == 0 &#123;</span><br><span class="line">        let model = topList[indexPath.row]</span><br><span class="line">        var titles: [String] = []</span><br><span class="line">        var vcs: [UIViewController] = []</span><br><span class="line">        for tab in model.extra?.tabList ?? [] &#123;</span><br><span class="line">            guard let tabTitle = tab.tabTitle else &#123; continue &#125;</span><br><span class="line">            titles.append(tabTitle)</span><br><span class="line">            vcs.append(UComicListViewController(argCon: tab.argCon,</span><br><span class="line">                                                argName: tab.argName,</span><br><span class="line">                                                argValue: tab.argValue))</span><br><span class="line">        &#125;</span><br><span class="line">        let vc = UPageViewController(titles: titles, vcs: vcs, pageStyle: .topTabBar)</span><br><span class="line">        vc.title = model.sortName</span><br><span class="line">        navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    if indexPath.section == 1 &#123;</span><br><span class="line">        let model = rankList[indexPath.row]</span><br><span class="line">        let vc = UComicListViewController(argCon: model.argCon,</span><br><span class="line">                                          argName: model.argName,</span><br><span class="line">                                          argValue: model.argValue)</span><br><span class="line">        vc.title = model.sortName</span><br><span class="line">        navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+             <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">collectionView</span><span class="params">(<span class="number">_</span> collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> indexPath.section == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> model = topList[indexPath.row]</span><br><span class="line">        <span class="keyword">var</span> titles: [<span class="type">String</span>] = []</span><br><span class="line">        <span class="keyword">var</span> vcs: [<span class="type">UIViewController</span>] = []</span><br><span class="line">        <span class="keyword">for</span> tab <span class="keyword">in</span> model.extra?.tabList ?? [] &#123;</span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> tabTitle = tab.tabTitle <span class="keyword">else</span> &#123; <span class="keyword">continue</span> &#125;</span><br><span class="line">            titles.append(tabTitle)</span><br><span class="line">            vcs.append(<span class="type">UComicListViewController</span>(argCon: tab.argCon,</span><br><span class="line">                                                argName: tab.argName,</span><br><span class="line">                                                argValue: tab.argValue))</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> vc = <span class="type">UPageViewController</span>(titles: titles, vcs: vcs, pageStyle: .topTabBar)</span><br><span class="line">        vc.title = model.sortName</span><br><span class="line">        navigationController?.pushViewController(vc, animated: <span class="literal">true</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> indexPath.section == <span class="number">1</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> model = rankList[indexPath.row]</span><br><span class="line">        <span class="keyword">let</span> vc = <span class="type">UComicListViewController</span>(argCon: model.argCon,</span><br><span class="line">                                          argName: model.argName,</span><br><span class="line">                                          argValue: model.argValue)</span><br><span class="line">        vc.title = model.sortName</span><br><span class="line">        navigationController?.pushViewController(vc, animated: <span class="literal">true</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -398,7 +398,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T02:37:16+08:00">
                 2018-01-21
@@ -531,7 +531,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -542,7 +542,7 @@
               <div class="site-state-item site-state-categories">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">Kategorien</span>
+                  <span class="site-state-item-name">categories</span>
                 
               </div>
             
@@ -590,7 +590,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -598,7 +598,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
